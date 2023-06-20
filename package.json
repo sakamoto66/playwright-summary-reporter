@@ -1,6 +1,6 @@
 {
   "name": "@sakamoto66/playwright-summary-reporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Playwright-summary-reporter is a GitHub repository for generating and reporting summaries of Playwright test results.",
   "repository": {
