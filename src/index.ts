@@ -1,5 +1,6 @@
 import { FullConfig, FullResult, Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter';
 import * as fs from 'fs';
+import * as path from 'path';
 
 function getDuration(startTime: number, endTime: number) {
   const ms = endTime - startTime
@@ -59,6 +60,9 @@ class SummaryReporter implements Reporter {
     
     if(this.options.outputFile) {
       const outputFile = this.options.outputFile
+      if(!fs.existsSync(path.dirname(outputFile))) {
+        fs.mkdirSync(path.dirname(outputFile), {recursive:true})
+      }
       fs.writeFileSync(outputFile, summary)
     } else {
       console.log(summary)
