@@ -4,6 +4,10 @@
 
 The Playwright-Summary-reporter is designed to generate and report summaries of Playwright test results.
 
+```bash
+All 20 ✅ 8 ❌ 6 ⚠ 2 ⏭  4 ⏱  0m 14s
+```
+
 ## Usage
 
 1. Install the playwright-summary-reporter library:
